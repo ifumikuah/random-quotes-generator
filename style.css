@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Lora, serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  color: white;
+}
+
+.bg-img__container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-img, .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-img {
+  object-fit: cover ;
+  object-position: center;
+  z-index: -1;
+}
+
+.overlay {
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  backdrop-filter: blur(5px);
+}
+
+body.light .overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-card {
+  width: 700px;
+  height: 400px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.8);
+}
+
+body.light .big-card {
+  box-shadow: 0px 0px 8px 1px rgba(150, 150, 150, 0.8);
+}
+
+.text__container {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text__container p {
+  margin: .5rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.text__container h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
